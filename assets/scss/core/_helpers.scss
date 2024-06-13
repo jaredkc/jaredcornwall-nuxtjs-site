@@ -1,0 +1,36 @@
+.clearfix {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  *zoom: 1;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.skip-link:focus {
+  background-color: $c-gray-100;
+  clip: auto;
+  color: $c-gray-900;
+  height: auto;
+  margin: 0;
+  overflow: auto;
+  padding: 0.8em 1em;
+  transition: none;
+  width: auto;
+  z-index: 10000;
+
+  position: absolute !important;
+  top: 1rem;
+  left: 1rem;
+}

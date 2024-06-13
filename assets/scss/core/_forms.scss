@@ -1,0 +1,115 @@
+// Basic defaults
+input,
+textarea,
+select {
+  border: 1px solid $c-border;
+  max-width: 100%;
+  &[disabled] {
+    background-color: $c-disabled;
+    border-color: $c-disabled-border;
+    cursor: default;
+  }
+}
+
+button,
+input[type='submit'],
+label[for] {
+  cursor: pointer;
+}
+
+textarea {
+  min-height: 100px;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  background-color: #fff;
+  border-radius: 0;
+  min-width: 100px;
+  &:focus {
+    border-color: $c-accent-1;
+  }
+}
+
+.form-input,
+.form-select {
+  height: 40px;
+}
+
+.form-input,
+.form-textarea {
+  padding: 0.8em;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' width='32' height='24' viewBox='0 0 32 24'><polygon points='0,0 32,0 16,24' style='fill: rgb%28138, 138, 138%29'></polygon></svg>");
+  background-position: right 10px center;
+  background-repeat: no-repeat;
+  background-size: 9px 6px;
+  padding-left: 0.8em;
+  padding-right: 1.5rem;
+}
+
+.form-label {
+  font-size: 0.9em;
+  color: $c-gray-600;
+}
+
+.form-block {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 100%;
+  }
+}
+
+.form-block-inline {
+  align-items: center;
+  border: 1px solid $c-border;
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  .form-label {
+    font-size: initial;
+    max-width: 200px;
+    min-width: 100px;
+    overflow: hidden;
+    padding-left: 0.8em;
+    padding-right: 0.4em;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .form-input,
+  .form-select,
+  .form-textarea {
+    border: 0;
+    flex-grow: 1;
+  }
+}
+
+// Errors
+.input-error {
+  border-color: $c-error;
+  background-color: $c-error-bg;
+}
+
+.errors {
+  border: 1px solid $c-error;
+  background-color: $c-error-bg;
+  padding: 0.5em 1em;
+  text-align: left;
+  p, ul {
+    margin: 0.5em 0;
+  }
+  ul {
+    padding-left: 1.5em;
+  }
+}

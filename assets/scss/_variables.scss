@@ -1,0 +1,41 @@
+
+// Layout
+$gutter: 4vw;
+
+// Breakpoints
+$bp-nav: 700px;
+$bp-sm: 576px;
+$bp-md: 768px;
+$bp-lg: 992px;
+$bp-xl: 1200px;
+$max-width: 1600px;
+
+// Colors
+$c-gray-100: #F7FAFC;
+$c-gray-200: #EDF2F7;
+$c-gray-300: #E2E8F0;
+$c-gray-400: #CBD5E0;
+$c-gray-500: #A0AEC0;
+$c-gray-600: #718096;
+$c-gray-700: #4A5568;
+$c-gray-800: #2D3748;
+$c-gray-900: #1A202C;
+
+$c-primary: #151726;
+$c-accent-1: #2ED2DF;
+$c-accent-2: #56EBB6;
+
+$c-border: $c-gray-300;
+
+$c-disabled: #CBD5E0;
+$c-disabled-border: #718096;
+$c-error: #C53030;
+$c-error-bg: #FED7D7;
+$c-success-border: #276749;
+$c-success: #2F855A;
+$c-success-bg: #C6F6D5;
+
+// Fonts
+$font-body: 'Lato', "San Francisco", "Segoe UI", "Helvetica Neue", sans-serif;
+$font-heading: 'Lato', "San Francisco", "Segoe UI", "Helvetica Neue", sans-serif;
+$font-display: 'Lato', "San Francisco", "Segoe UI", "Helvetica Neue", sans-serif;

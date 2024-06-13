@@ -1,0 +1,29 @@
+.bg-primary {
+	background-color: $c-primary;
+  color: $c-gray-300;
+  a {
+    color: $c-gray-300;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+    }
+  }
+}
+
+.bg-gray {
+	background-color: $c-gray-100;
+}
+
+.bg-gradient {
+  background: linear-gradient(135deg, #27b2c7 0%, #2c9ecc 100%);
+  color: $c-gray-300;
+  a {
+    color: $c-gray-300;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #fff;
+    }
+  }
+}

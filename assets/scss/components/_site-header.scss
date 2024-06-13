@@ -1,0 +1,66 @@
+.site-header {
+  border-bottom: 1px solid $c-border;
+}
+
+
+// Show menu on large screens, toggle it on small screens
+@media screen and (max-width: ($bp-nav - 1)) {
+  .site-nav { display: none; }
+  .site-nav-open .site-nav { display: block; }
+}
+@media screen and (min-width: $bp-nav) {
+  .site-nav { display: block; }
+  .site-nav-btn { display: none; }
+}
+
+
+// Animated menu icon
+.site-nav-btn {
+  &:hover {
+    .menu-icon,
+    .menu-icon:after,
+    .menu-icon:before {
+      background-color: $c-accent-1;
+    }
+  }
+}
+.menu-icon,
+.menu-icon:after,
+.menu-icon:before {
+	background-color: $c-gray-700;
+	content: '';
+  cursor: pointer;
+	display: inline-block;
+  height: 2px;
+	width: 20px;
+	transform: translate3d(0, 0, 0);
+	transition: top .1s .2s, background-color .3s, transform .15s cubic-bezier(.37, .74, .15, 1.45);
+}
+.menu-icon {
+  position: relative;
+  vertical-align: middle;
+}
+.menu-icon:before,
+.menu-icon:after {
+  position: absolute;
+  left: 0;
+}
+.menu-icon:before { top: -6px; }
+.menu-icon:after { top: 6px; }
+.site-nav-open {
+  .site-nav-btn .menu-icon,
+  .menu-icon {
+    background-color: transparent;
+  }
+  .menu-icon:after,
+  .menu-icon:before {
+    top: 0;
+    transition-delay: 0s, 0s, .2s;
+  }
+  .menu-icon:before {
+    transform: rotate3d(0, 0, 1, 45deg);
+  }
+  .menu-icon:after {
+    transform: rotate3d(0, 0, 1, -45deg);
+  }
+}

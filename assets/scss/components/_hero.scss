@@ -1,0 +1,47 @@
+.hero {
+  position: relative;
+}
+
+.hero__img {
+  object-fit: cover;
+  vertical-align: bottom;
+  max-height: 100vh;
+  min-height: 50vh;
+  position: relative;
+  z-index: -1;
+}
+
+.hero__content {
+  background-color: $c-primary;
+  color: #fff;
+  margin: 0 $gutter;
+  padding: 1rem;
+  transform: translateY(-$gutter);
+}
+
+@media (min-width: $bp-md) {
+  .hero {
+    margin-bottom: $gutter;
+  }
+  .hero__img {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+
+  .hero__content {
+    bottom: 0;
+    left: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    max-width: calc(50% - 4vw);
+    padding: $gutter;
+    position: absolute;
+    transform: translateY($gutter);
+  }
+  .hero__content--br {
+    left: initial;
+    right: 0;
+  }
+}
